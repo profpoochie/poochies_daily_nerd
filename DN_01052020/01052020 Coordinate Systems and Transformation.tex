@@ -1,0 +1,1321 @@
+
+\documentclass{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amssymb}
+
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.50.0.2953}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{Created=Sunday, January 05, 2020 14:53:20}
+%TCIDATA{LastRevised=Wednesday, January 15, 2020 05:37:44}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Standard LaTeX\Blank - Standard LaTeX Article">}
+%TCIDATA{CSTFile=40 LaTeX article.cst}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\input{tcilatex}
+\begin{document}
+
+
+\section{\protect\bigskip Chapter 2: Coordinate Systems and Transformation}
+
+\subsection{2.1. Introduction}
+
+An orthogonal system is one in which the coordinates are mutually
+perpendicular.
+
+\bigskip
+
+\subsection{2.2. Cartesian Coordinates $(x,y,z)$}
+
+The ranges of coordinate system
+
+\begin{eqnarray*}
+-\infty &<&x<\infty \\
+-\infty &<&y<\infty \\
+-\infty &<&z<\infty
+\end{eqnarray*}
+
+A vector $\mathbf{A}$ in Cartesian (otherwise known as rectangular)
+coordinates can be written as 
+\[
+\left( A_{x},A_{y},A_{z}\right) \text{ ~~or ~~~}A_{x}\mathbf{a}_{x}+A_{y}%
+\mathbf{a}_{y}+A_{z}\mathbf{a}_{z} 
+\]%
+where $\mathbf{a}_{x},$ $\mathbf{a}_{x},$ $\mathbf{a}_{x}$ are units vectors
+along the $x-,$ $y-,$ and $z-$ direction as shown.
+
+\bigskip
+
+\subsection{2.3. Circular Cylindrical Coordinate $(\protect\rho ,\protect%
+\phi ,z)$}
+
+The ranges of coordinate system
+
+\begin{eqnarray*}
+0\, &\leq &\rho <\infty \\
+0\, &\leq &\phi <\infty \\
+-\infty &<&z<\infty
+\end{eqnarray*}
+
+A vector $\mathbf{A}$ in cylindrical coodinates can be written as 
+\[
+\left( A_{\rho },A_{\phi },A_{z}\right) \text{ ~~or ~~~}A_{\rho }\mathbf{a}%
+_{\rho }+A_{\phi }\mathbf{a}_{\phi }+A_{z}\mathbf{a}_{z} 
+\]
+
+The magnitude of $\mathbf{A}$ is 
+\[
+\left\vert \mathbf{A}\right\vert =\left( A_{\rho }^{2}+A_{\phi
+}^{2}+A_{z}^{2}\right) 
+\]
+
+The relation of unit vectors are 
+\begin{eqnarray*}
+\mathbf{a}_{\rho }\bullet \mathbf{a}_{\rho } &=&\mathbf{a}_{\phi }\bullet 
+\mathbf{a}_{\phi }=\mathbf{a}_{z}\bullet \mathbf{a}_{z}=1 \\
+\mathbf{a}_{\rho }\bullet \mathbf{a}_{\phi } &=&\mathbf{a}_{\phi }\bullet 
+\mathbf{a}_{z}=\mathbf{a}_{z}\bullet \mathbf{a}_{\rho }=0 \\
+\mathbf{a}_{\rho }\times \mathbf{a}_{\phi } &=&\mathbf{a}_{z} \\
+\mathbf{a}_{\phi }\times \mathbf{a}_{z} &=&\mathbf{a}_{\rho } \\
+\mathbf{a}_{z}\times \mathbf{a}_{\rho } &=&\mathbf{a}_{\phi }
+\end{eqnarray*}
+
+The relationships between the variables $\left( x,y,z\right) $ of the
+Cartesian coordinate system and those of the cylindrical system and those of
+the cylindrical system $(\rho ,\phi ,z)$ 
+\begin{eqnarray*}
+\rho &=&\sqrt{x^{2}+y^{2}} \\
+\phi &=&\arctan \left( \dfrac{y}{x}\right) \\
+z &=&z
+\end{eqnarray*}
+
+or 
+\begin{eqnarray*}
+x &=&\rho \cos \left( \phi \right) \\
+y &=&\rho \sin \left( \phi \right) \\
+z &=&z
+\end{eqnarray*}
+
+The relationship between $\left( \mathbf{a}_{x},\mathbf{a}_{y},\mathbf{a}%
+_{z}\right) $ and $\left( \mathbf{a}_{\rho },\mathbf{a}_{\phi },\mathbf{a}%
+_{z}\right) $ are obtained geometrically 
+\begin{eqnarray*}
+\mathbf{a}_{x} &=&\cos \left( \phi \right) \mathbf{a}_{\rho }-\sin \left(
+\phi \right) \mathbf{a}_{\phi } \\
+\mathbf{a}_{y} &=&\sin \left( \phi \right) \mathbf{a}_{\rho }+\cos \left(
+\phi \right) \mathbf{a}_{\phi } \\
+\mathbf{a}_{z} &=&\mathbf{a}_{z}
+\end{eqnarray*}
+
+or 
+\begin{eqnarray*}
+\mathbf{a}_{\rho } &=&\cos \left( \phi \right) \mathbf{a}_{x}+\sin \left(
+\phi \right) \mathbf{a}_{y} \\
+\mathbf{a}_{\phi } &=&-\sin \left( \phi \right) \mathbf{a}_{x}+\cos \left(
+\phi \right) \mathbf{a}_{y} \\
+\mathbf{a}_{z} &=&\mathbf{a}_{z}
+\end{eqnarray*}
+
+The relationship between $\left( A_{x},A_{y},A_{z}\right) $ and $\left(
+A_{\rho },A_{\phi },A_{z}\right) $ are obtained by substitution%
+\[
+\mathbf{A=}\left( A_{x}\cos \left( \phi \right) +A_{y}\sin \left( \phi
+\right) \right) \mathbf{a}_{\rho }+\left( -A_{x}\sin \left( \phi \right)
++A_{y}\cos \left( \phi \right) \right) +A_{z}\mathbf{a}_{z} 
+\]
+
+or 
+\begin{eqnarray*}
+A_{\rho } &=&A_{x}\cos \left( \phi \right) +A_{y}\sin \left( \phi \right) \\
+A_{\phi } &=&-A_{x}\sin \left( \phi \right) +A_{y}\cos \left( \phi \right) \\
+A_{z} &=&A_{z}
+\end{eqnarray*}
+
+In matrix form, transformation of vector $\mathbf{A}$ form $\left(
+A_{x},A_{y},A_{z}\right) \longrightarrow \left( A_{\rho },A_{\phi
+},A_{z}\right) $ 
+\[
+\left[ 
+\begin{array}{c}
+A_{p} \\ 
+A_{\phi } \\ 
+A_{z}%
+\end{array}%
+\right] =\left[ 
+\begin{array}{ccc}
+\cos \left( \phi \right) & \sin \left( \phi \right) & 0 \\ 
+-\sin \left( \phi \right) & \cos \left( \phi \right) & 0 \\ 
+0 & 0 & 1%
+\end{array}%
+\right] \left[ 
+\begin{array}{c}
+A_{x} \\ 
+A_{y} \\ 
+A_{z}%
+\end{array}%
+\right] 
+\]
+
+By matrix inversion, transformation of vector $\mathbf{A}$ form $\left(
+A_{\rho },A_{\phi },A_{z}\right) $ $\longrightarrow \left(
+A_{x},A_{y},A_{z}\right) $ 
+\[
+\left[ 
+\begin{array}{c}
+A_{x} \\ 
+A_{y} \\ 
+A_{z}%
+\end{array}%
+\right] =\left[ 
+\begin{array}{ccc}
+\cos \phi & -\sin \phi & 0 \\ 
+\sin \phi & \cos \phi & 0 \\ 
+0 & 0 & 1%
+\end{array}%
+\right] \left[ 
+\begin{array}{c}
+A_{p} \\ 
+A_{\phi } \\ 
+A_{z}%
+\end{array}%
+\right] 
+\]
+
+Alternatively, using dot product%
+\[
+\left[ 
+\begin{array}{c}
+A_{x} \\ 
+A_{y} \\ 
+A_{z}%
+\end{array}%
+\right] =\left[ 
+\begin{array}{ccc}
+\mathbf{a}_{x}\bullet \mathbf{a}_{\rho } & \mathbf{a}_{x}\bullet \mathbf{a}%
+_{\phi } & \mathbf{a}_{x}\bullet \mathbf{a}_{z} \\ 
+\mathbf{a}_{y}\bullet \mathbf{a}_{p} & \mathbf{a}_{y}\bullet \mathbf{a}%
+_{\phi } & \mathbf{a}_{y}\bullet \mathbf{a}_{z} \\ 
+\mathbf{a}_{z}\bullet \mathbf{a}_{p} & \mathbf{a}_{z}\bullet \mathbf{a}%
+_{\phi } & \mathbf{a}_{z}\bullet \mathbf{a}_{z}%
+\end{array}%
+\right] \left[ 
+\begin{array}{c}
+A_{p} \\ 
+A_{\phi } \\ 
+A_{z}%
+\end{array}%
+\right] 
+\]
+
+\subsection{2.4. Spherical Coordinates $\left( r,\protect\theta ,\protect%
+\phi \right) $}
+
+The range of variables 
+\begin{eqnarray*}
+0 &\leq &r<\infty \\
+0 &\leq &\theta \leq \pi \\
+0 &\leq &\phi <2\pi
+\end{eqnarray*}
+
+A vector $\mathbf{A}$ in spherical coordinates may be written as 
+\[
+\left( A_{r},A_{\theta },A_{\phi }\right) ~~~~or~~~~A_{r}\mathbf{a}%
+_{r}+A_{\theta }\mathbf{a}_{\theta }+A_{\phi }\mathbf{a}_{\phi } 
+\]
+
+The magniture of $\mathbf{A}$ is 
+\[
+\left\vert \mathbf{A}\right\vert =\sqrt{A_{r}^{2}+A_{\theta }^{2}+A_{\phi
+}^{2}} 
+\]
+
+The unit vector relationships 
+\begin{eqnarray*}
+\mathbf{a}_{r}\bullet \mathbf{a}_{r} &=&\mathbf{a}_{\theta }\bullet \mathbf{a%
+}_{\theta }=\mathbf{a}_{\phi }\bullet \mathbf{a}_{\phi }=1 \\
+\mathbf{a}_{r}\bullet \mathbf{a}_{\theta } &=&\mathbf{a}_{\theta }\bullet 
+\mathbf{a}_{\phi }=\mathbf{a}_{\phi }\bullet \mathbf{a}_{r}=0 \\
+\mathbf{a}_{r}\times \mathbf{a}_{\theta } &=&\mathbf{a}_{\phi } \\
+\mathbf{a}_{\theta }\times \mathbf{a}_{\phi } &=&\mathbf{a}_{r} \\
+\mathbf{a}_{\phi }\times \mathbf{a}_{r} &=&\mathbf{a}_{\theta }
+\end{eqnarray*}
+
+The space variables $\left( x,y,z\right) $ in Cartesian coordinates can be
+related to variables $\left( r,\theta ,\phi \right) $ of a spherical
+coordinate system 
+\begin{eqnarray*}
+r &=&\sqrt{x^{2}+y^{2}+z^{2}} \\
+\theta &=&\arctan \left( \dfrac{\sqrt{x^{2}+y^{2}}}{z}\right) \\
+\phi &=&\arctan \left( \dfrac{y}{x}\right)
+\end{eqnarray*}
+
+or 
+\begin{eqnarray*}
+x &=&r\sin \left( \theta \right) \cos \left( \phi \right) \\
+y &=&r\sin \left( \theta \right) \sin \left( \phi \right) \\
+z &=&r\cos \left( \theta \right)
+\end{eqnarray*}
+
+The unit vectors $\mathbf{a}_{x},\mathbf{a}_{y},\mathbf{a}_{z}$ and $\mathbf{%
+a}_{r},\mathbf{a}_{\theta },\mathbf{a}_{\phi }$ are related as follows:
+
+$\mathbf{a}_{r},\mathbf{a}_{\theta },\mathbf{a}_{\phi }\longrightarrow 
+\mathbf{a}_{x},\mathbf{a}_{y},\mathbf{a}_{z}$ 
+\begin{eqnarray*}
+\mathbf{a}_{x} &=&\sin \left( \theta \right) \cos \left( \phi \right) 
+\mathbf{a}_{r}+\cos \left( \theta \right) \cos \left( \phi \right) \mathbf{a}%
+_{\theta }-\sin \left( \phi \right) \mathbf{a}_{\phi } \\
+\mathbf{a}_{y} &=&\sin \left( \theta \right) \sin \left( \phi \right) 
+\mathbf{a}_{r}+\cos \left( \theta \right) \sin \left( \phi \right) \mathbf{a}%
+_{\theta }+\cos \left( \phi \right) \mathbf{a}_{\phi } \\
+\mathbf{a}_{z} &=&\cos \left( \theta \right) \mathbf{a}_{r}-\sin \left(
+\theta \right) \mathbf{a}_{\theta }
+\end{eqnarray*}
+
+or $\mathbf{a}_{x},\mathbf{a}_{y},\mathbf{a}_{z}\longrightarrow \mathbf{a}%
+_{r},\mathbf{a}_{\theta },\mathbf{a}_{\phi }$ 
+\begin{eqnarray*}
+\mathbf{a}_{r} &=&\sin \left( \theta \right) \cos \left( \phi \right) 
+\mathbf{a}_{x}+\sin \left( \theta \right) \sin \left( \phi \right) \mathbf{a}%
+_{y}+\cos \left( \theta \right) \mathbf{a}_{z} \\
+\mathbf{a}_{\theta } &=&\cos \left( \theta \right) \sin \left( \phi \right) 
+\mathbf{a}_{x}+\cos \left( \theta \right) \sin \left( \phi \right) \mathbf{a}%
+_{y}-\cos \left( \theta \right) \mathbf{a}_{z} \\
+\mathbf{a}_{\phi } &=&-\sin \left( \phi \right) \mathbf{a}_{x}+\cos \left(
+\theta \right) \mathbf{a}_{y}
+\end{eqnarray*}
+
+The components of vector $\mathbf{A=}\left( A_{x},A_{y},A_{z}\right) $ and $%
+\mathbf{A=}\left( A_{r},A_{\theta },A_{\phi }\right) $ are related by the
+equation 
+\[
+\mathbf{A=}\left( A_{x}\sin \left( \theta \right) \cos \left( \phi \right)
++A_{y}\sin \left( \theta \right) \sin \left( \phi \right) +A_{z}\cos \left(
+\theta \right) \right) \mathbf{a}_{r}+\left( A_{x}\cos \left( \theta \right)
+\cos \left( \phi \right) +A_{y}\cos \left( \theta \right) \sin \left( \phi
+\right) -A_{z}\sin \left( \theta \right) \right) \mathbf{a}_{\theta }-\left(
+-A_{x}\sin \left( \phi \right) +A_{y}\cos \left( \phi \right) \right) 
+\mathbf{a}_{\phi } 
+\]
+
+or 
+\begin{eqnarray*}
+A_{r} &=&A_{x}\sin \left( \theta \right) \cos \left( \phi \right) +A_{y}\sin
+\left( \theta \right) \sin \left( \phi \right) +A_{z}\cos \left( \theta
+\right) \\
+A_{\theta } &=&A_{x}\cos \left( \theta \right) \cos \left( \phi \right)
++A_{y}\cos \left( \theta \right) \sin \left( \phi \right) -A_{z}\sin \left(
+\theta \right) \\
+A_{\phi } &=&-A_{x}\sin \left( \phi \right) +A_{y}\cos \left( \phi \right)
+\end{eqnarray*}
+
+In matrix form, $\left( A_{x},A_{y},A_{z}\right) \longrightarrow \left(
+A_{r},A_{\theta },A_{\phi }\right) $ 
+\[
+\left[ 
+\begin{array}{c}
+A_{r} \\ 
+A_{\theta } \\ 
+A_{\phi }%
+\end{array}%
+\right] =\left[ 
+\begin{array}{ccc}
+\sin \left( \theta \right) \cos \left( \phi \right) & \sin \left( \theta
+\right) \sin \left( \phi \right) & \cos \left( \theta \right) \\ 
+\cos \left( \theta \right) \cos \left( \phi \right) & \cos \left( \theta
+\right) \sin \left( \phi \right) & -\sin \left( \theta \right) \\ 
+-\sin \left( \phi \right) & \cos \left( \phi \right) & 0%
+\end{array}%
+\right] \left[ 
+\begin{array}{c}
+A_{x} \\ 
+A_{y} \\ 
+A_{z}%
+\end{array}%
+\right] 
+\]%
+$\allowbreak $
+
+By matrix inversion, transformation of vector $\mathbf{A}$ form $\left(
+A_{r},A_{\theta },A_{\phi }\right) $ $\longrightarrow \left(
+A_{x},A_{y},A_{z}\right) $ 
+\[
+\left[ 
+\begin{array}{c}
+A_{x} \\ 
+A_{y} \\ 
+A_{z}%
+\end{array}%
+\right] =\left[ 
+\begin{array}{ccc}
+\sin \left( \theta \right) \cos \left( \phi \right) & \cos \left( \theta
+\right) \cos \left( \phi \right) & -\sin \left( \phi \right) \\ 
+\sin \left( \theta \right) \sin \left( \phi \right) & \cos \left( \theta
+\right) \sin \left( \phi \right) & \cos \left( \phi \right) \\ 
+\cos \left( \theta \right) & -\sin \left( \theta \right) & 0%
+\end{array}%
+\right] \left[ 
+\begin{array}{c}
+A_{r} \\ 
+A_{\theta } \\ 
+A_{\phi }%
+\end{array}%
+\right] 
+\]
+
+Alternatively, using dot product 
+\[
+\left[ 
+\begin{array}{c}
+A_{r} \\ 
+A_{\theta } \\ 
+A_{\phi }%
+\end{array}%
+\right] =\left[ 
+\begin{array}{ccc}
+\mathbf{a}_{r}\bullet \mathbf{a}_{x} & \mathbf{a}_{r}\bullet \mathbf{a}_{y}
+& \mathbf{a}_{r}\bullet \mathbf{a}_{z} \\ 
+\mathbf{a}_{\theta }\bullet \mathbf{a}_{x} & \mathbf{a}_{\theta }\bullet 
+\mathbf{a}_{y} & \mathbf{a}_{\theta }\bullet \mathbf{a}_{z} \\ 
+\mathbf{a}_{\phi }\bullet \mathbf{a}_{x} & \mathbf{a}_{\phi }\bullet \mathbf{%
+a}_{y} & \mathbf{a}_{\phi }\bullet \mathbf{a}_{z}%
+\end{array}%
+\right] \left[ 
+\begin{array}{c}
+A_{x} \\ 
+A_{y} \\ 
+A_{z}%
+\end{array}%
+\right] 
+\]
+
+The distance between two points is necessary in EM theory. The distance $d$
+between two points with position vector $\mathbf{r}_{1}$ and $\mathbf{r}_{2}$
+is generally given by 
+\[
+d=\left\vert \mathbf{r}_{2}-\mathbf{r}_{1}\right\vert 
+\]
+
+or 
+\begin{eqnarray*}
+d^{2} &=&\left( x_{2}-x_{1}\right) ^{2}+\left( y_{2}-y_{1}\right)
+^{2}+\left( z_{2}-z_{1}\right) ^{2}~~~~\text{(Cartesian)} \\
+d^{2} &=&\rho _{2}^{2}+\rho _{1}^{2}-2\rho _{1}\rho _{2}\cos \left( \phi
+_{2}-\phi _{1}\right) +\left( z_{2}-z_{1}\right) ^{2}~\text{~~~(cylindrical)}
+\\
+d^{2} &=&r_{2}^{2}+r_{1}^{2}-2r_{1}r_{2}\cos \left( \theta _{2}\right) \cos
+\left( \theta _{1}\right) -2r_{1}r_{2}\sin \left( \theta _{2}\right) \sin
+\left( \theta _{1}\right) \cos \left( \phi _{2}-\phi _{1}\right) ~~~~\text{%
+(spherical)}
+\end{eqnarray*}
+
+\bigskip
+
+\subsubsection{Example 2.1}
+
+Given point $P\left( -2,6,3\right) $ and vector $\mathbf{A=}y\mathbf{a}%
+_{x}+\left( x+z\right) \mathbf{a}_{y}$, express $P$ and $\mathbf{A}$ in
+cylindrical and spherical coordinates. Evaluate $\mathbf{A}$ at $P$ in the
+Cartesian, cylindrical, and spherical systems.
+
+Solution:
+
+$\because $ $P\left( -2,6,3\right) $ $\therefore $ $x=-2;$ $y=6;$ and $z=3$.
+Using the formula to get $\left( \rho ,\phi ,z\right) $ 
+\begin{eqnarray*}
+\rho &=&\sqrt{x^{2}+y^{2}}=\sqrt{\left( -2\right) ^{2}+6^{2}}=2\sqrt{10}%
+=6.\,\allowbreak 324\,6 \\
+\phi &=&\arctan \left( \dfrac{y}{x}\right) =\arctan \left( \dfrac{6}{-2}%
+\right) =\left( 180\unit{%
+%TCIMACRO{\U{b0}}%
+%BeginExpansion
+{{}^\circ}%
+%EndExpansion
+}-71.\,\allowbreak 565\unit{%
+%TCIMACRO{\U{b0}}%
+%BeginExpansion
+{{}^\circ}%
+%EndExpansion
+}\right) =108.\,\allowbreak 43\unit{%
+%TCIMACRO{\U{b0}}%
+%BeginExpansion
+{{}^\circ}%
+%EndExpansion
+} \\
+z &=&6
+\end{eqnarray*}
+
+$\therefore P\left( -2,6,3\right) _{Cartesian}=P\left( 6.\,\allowbreak
+324\,6,108.\,\allowbreak 43\unit{%
+%TCIMACRO{\U{b0}}%
+%BeginExpansion
+{{}^\circ}%
+%EndExpansion
+},3\right) _{cylindrical}$
+
+$\because $ $\mathbf{A=}y\mathbf{a}_{x}+\left( x+z\right) \mathbf{a}_{y}=6%
+\mathbf{a}_{x}+\left( -2+3\right) \mathbf{a}_{y}=\allowbreak 6\mathbf{a}_{x}+%
+\mathbf{a}_{y},$ $\therefore A_{x}=6;$ $A_{y}=1$ and $A_{z}=0$
+
+Using the matrix conversion $\left( A_{x},A_{y},A_{z}\right) \longrightarrow
+\left( A_{\rho },A_{\phi },A_{z}\right) $ 
+\begin{eqnarray*}
+\left[ 
+\begin{array}{c}
+A_{p} \\ 
+A_{\phi } \\ 
+A_{z}%
+\end{array}%
+\right] &=&\left[ 
+\begin{array}{ccc}
+\cos \left( \phi \right) & \sin \left( \phi \right) & 0 \\ 
+-\sin \left( \phi \right) & \cos \left( \phi \right) & 0 \\ 
+0 & 0 & 1%
+\end{array}%
+\right] \left[ 
+\begin{array}{c}
+A_{x} \\ 
+A_{y} \\ 
+A_{z}%
+\end{array}%
+\right] \\
+&=&\left[ 
+\begin{array}{ccc}
+\cos \left( 108.\,\allowbreak 43\unit{%
+%TCIMACRO{\U{b0}}%
+%BeginExpansion
+{{}^\circ}%
+%EndExpansion
+}\right) & \sin \left( 108.\,\allowbreak 43\unit{%
+%TCIMACRO{\U{b0}}%
+%BeginExpansion
+{{}^\circ}%
+%EndExpansion
+}\right) & 0 \\ 
+-\sin \left( 108.\,\allowbreak 43\unit{%
+%TCIMACRO{\U{b0}}%
+%BeginExpansion
+{{}^\circ}%
+%EndExpansion
+}\right) & \cos \left( 108.\,\allowbreak 43\unit{%
+%TCIMACRO{\U{b0}}%
+%BeginExpansion
+{{}^\circ}%
+%EndExpansion
+}\right) & 0 \\ 
+0 & 0 & 1%
+\end{array}%
+\right] \left[ 
+\begin{array}{c}
+6 \\ 
+1 \\ 
+0%
+\end{array}%
+\right] \\
+\left[ 
+\begin{array}{c}
+A_{p} \\ 
+A_{\phi } \\ 
+A_{z}%
+\end{array}%
+\right] &=&\left[ 
+\begin{array}{c}
+-0.948\,16 \\ 
+-6.\,\allowbreak 008\,4 \\ 
+0%
+\end{array}%
+\right] \allowbreak
+\end{eqnarray*}
+
+$\therefore \mathbf{A=}-0.948\,16\mathbf{a}_{\rho }+-6.\,\allowbreak 008\,4\,%
+\mathbf{a}_{\phi }$ ~(cylindrical coordinates)
+
+$\because $ $P\left( -2,6,3\right) $ $\therefore $ $x=-2;$ $y=6;$ and $z=3$.
+Using the formula to get $\left( r,\theta ,\phi \right) $ 
+\begin{eqnarray*}
+r &=&\sqrt{x^{2}+y^{2}+z^{2}}=\sqrt{\left( -2\right) ^{2}+6^{2}+3^{2}}=7 \\
+\theta &=&\arctan \left( \dfrac{\sqrt{x^{2}+y^{2}}}{z}\right) =\arctan
+\left( \dfrac{\sqrt{\left( -2\right) ^{2}+6^{2}}}{3}\right)
+=64.\,\allowbreak 624\unit{%
+%TCIMACRO{\U{b0}}%
+%BeginExpansion
+{{}^\circ}%
+%EndExpansion
+} \\
+\phi &=&\arctan \left( \dfrac{y}{x}\right) =\arctan \left( \dfrac{6}{-2}%
+\right) =\left( 180\unit{%
+%TCIMACRO{\U{b0}}%
+%BeginExpansion
+{{}^\circ}%
+%EndExpansion
+}-71.\,\allowbreak 565\unit{%
+%TCIMACRO{\U{b0}}%
+%BeginExpansion
+{{}^\circ}%
+%EndExpansion
+}\right) =108.\,\allowbreak 43\unit{%
+%TCIMACRO{\U{b0}}%
+%BeginExpansion
+{{}^\circ}%
+%EndExpansion
+}
+\end{eqnarray*}
+
+$\therefore $ $P\left( -2,6,3\right) _{Cartesian}=P\left( 7,64.\,\allowbreak
+624\unit{%
+%TCIMACRO{\U{b0}}%
+%BeginExpansion
+{{}^\circ}%
+%EndExpansion
+},108.\,\allowbreak 43\unit{%
+%TCIMACRO{\U{b0}}%
+%BeginExpansion
+{{}^\circ}%
+%EndExpansion
+}\right) _{spherical}$
+
+$\because $ $\mathbf{A=}y\mathbf{a}_{x}+\left( x+z\right) \mathbf{a}_{y}=6%
+\mathbf{a}_{x}+\left( -2+3\right) \mathbf{a}_{y}=\allowbreak 6\mathbf{a}_{x}+%
+\mathbf{a}_{y},$ $\therefore A_{x}=6;$ $A_{y}=1$ and $A_{z}=0$
+
+Using the matrix conversion $\left( A_{x},A_{y},A_{z}\right) \longrightarrow
+\left( A_{r},A_{\theta },A_{\phi }\right) $ 
+\begin{eqnarray*}
+\left[ 
+\begin{array}{c}
+A_{r} \\ 
+A_{\theta } \\ 
+A_{\phi }%
+\end{array}%
+\right] &=&\left[ 
+\begin{array}{ccc}
+\sin \left( \theta \right) \cos \left( \phi \right) & \sin \left( \theta
+\right) \sin \left( \phi \right) & \cos \left( \theta \right) \\ 
+\cos \left( \theta \right) \cos \left( \phi \right) & \cos \left( \theta
+\right) \sin \left( \phi \right) & -\sin \left( \theta \right) \\ 
+-\sin \left( \phi \right) & \cos \left( \phi \right) & 0%
+\end{array}%
+\right] \left[ 
+\begin{array}{c}
+A_{x} \\ 
+A_{y} \\ 
+A_{z}%
+\end{array}%
+\right] \\
+&=&\left[ 
+\begin{array}{ccc}
+\sin \left( 64.\,\allowbreak 624\unit{%
+%TCIMACRO{\U{b0}}%
+%BeginExpansion
+{{}^\circ}%
+%EndExpansion
+}\right) \cos \left( 108.\,\allowbreak 43\unit{%
+%TCIMACRO{\U{b0}}%
+%BeginExpansion
+{{}^\circ}%
+%EndExpansion
+}\right) & \sin \left( 64.\,\allowbreak 624\unit{%
+%TCIMACRO{\U{b0}}%
+%BeginExpansion
+{{}^\circ}%
+%EndExpansion
+}\right) \sin \left( 108.\,\allowbreak 43\unit{%
+%TCIMACRO{\U{b0}}%
+%BeginExpansion
+{{}^\circ}%
+%EndExpansion
+}\right) & \cos \left( 64.\,\allowbreak 624\unit{%
+%TCIMACRO{\U{b0}}%
+%BeginExpansion
+{{}^\circ}%
+%EndExpansion
+}\right) \\ 
+\cos \left( 64.\,\allowbreak 624\unit{%
+%TCIMACRO{\U{b0}}%
+%BeginExpansion
+{{}^\circ}%
+%EndExpansion
+}\right) \cos \left( 108.\,\allowbreak 43\unit{%
+%TCIMACRO{\U{b0}}%
+%BeginExpansion
+{{}^\circ}%
+%EndExpansion
+}\right) & \cos \left( 64.\,\allowbreak 624\unit{%
+%TCIMACRO{\U{b0}}%
+%BeginExpansion
+{{}^\circ}%
+%EndExpansion
+}\right) \sin \left( 108.\,\allowbreak 43\unit{%
+%TCIMACRO{\U{b0}}%
+%BeginExpansion
+{{}^\circ}%
+%EndExpansion
+}\right) & -\sin \left( 64.\,\allowbreak 624\unit{%
+%TCIMACRO{\U{b0}}%
+%BeginExpansion
+{{}^\circ}%
+%EndExpansion
+}\right) \\ 
+-\sin \left( 108.\,\allowbreak 43\unit{%
+%TCIMACRO{\U{b0}}%
+%BeginExpansion
+{{}^\circ}%
+%EndExpansion
+}\right) & \cos \left( 108.\,\allowbreak 43\unit{%
+%TCIMACRO{\U{b0}}%
+%BeginExpansion
+{{}^\circ}%
+%EndExpansion
+}\right) & 0%
+\end{array}%
+\right] \left[ 
+\begin{array}{c}
+6 \\ 
+1 \\ 
+0%
+\end{array}%
+\right] \\
+\left[ 
+\begin{array}{c}
+A_{r} \\ 
+A_{\theta } \\ 
+A_{\phi }%
+\end{array}%
+\right] &=&\left[ 
+\begin{array}{c}
+-0.856\,68 \\ 
+-0.406\,34 \\ 
+-6.\,\allowbreak 008\,4%
+\end{array}%
+\right] \allowbreak
+\end{eqnarray*}
+
+$\therefore \mathbf{A=}-0.856\,68\mathbf{a}_{r}-0.406\,34\mathbf{a}_{\theta
+}-6.\,\allowbreak 008\,4\mathbf{a}_{\phi }$ (spherical coordinates)
+
+$\therefore \mathbf{A=}6\mathbf{a}_{x}+\mathbf{a}_{y}=-0.948\,16\mathbf{a}%
+_{\rho }+-6.\,\allowbreak 008\,4\,\mathbf{a}_{\phi }=-0.856\,68\mathbf{a}%
+_{r}-0.406\,34\mathbf{a}_{\theta }-6.\,\allowbreak 008\,4\mathbf{a}_{\phi }$
+
+Getting $\left\vert \mathbf{A}\right\vert $ for all coordinate system%
+\begin{eqnarray*}
+\left\vert \mathbf{A}\right\vert _{Cartesian} &=&\sqrt{%
+A_{x}^{2}+A_{y}^{2}+A_{z}^{2}}=\sqrt{6^{2}+1^{2}+0}=6.\,\allowbreak 082\,8 \\
+\left\vert \mathbf{A}\right\vert _{cylindrical} &=&\sqrt{A_{\rho
+}^{2}+A_{\phi }^{2}+A_{z}^{2}}=\sqrt{\left( -0.948\,16\right) ^{2}+\left(
+-6.\,\allowbreak 008\,4\right) ^{2}+0}=6.\,\allowbreak 082\,8 \\
+\left\vert \mathbf{A}\right\vert _{spherical} &=&\sqrt{A_{r}^{2}+A_{\theta
+}^{2}+A_{\phi }^{2}}=\sqrt{\left( -0.856\,68\right) ^{2}+\left(
+-0.406\,34\right) ^{2}+\left( -6.\,\allowbreak 008\,4\right) ^{2}}%
+=6.\,\allowbreak 082\,8
+\end{eqnarray*}%
+$\therefore $ the answers are correct.
+
+\bigskip
+
+\subsubsection{Practice Exercise 2.1.}
+
+(a) Convert points $P\left( 1,3,5\right) ,$ $T\left( 0,-4,3\right) $, and $%
+S\left( -3,-4,-10\right) $ from Cartesian to cylindrical and spherical
+coordinates.
+
+(b) Transform vector 
+\[
+\mathbf{Q=}\dfrac{\sqrt{x^{2}+y^{2}}\mathbf{a}_{x}}{\sqrt{x^{2}+y^{2}+z^{2}}}%
+-\dfrac{yz\mathbf{a}_{z}}{\sqrt{x^{2}+y^{2}+z^{2}}} 
+\]%
+to cylindrical and spherical coordinates.
+
+(c) Evaluate $\mathbf{Q}$ at $T$ in the three coordinate systems.
+
+Solution:
+
+(a) $P\left( 1,3,5\right) \longrightarrow P\left( \rho ,\phi ,z\right)
+\longrightarrow P\left( r,\theta ,\phi \right) $
+
+\begin{eqnarray*}
+\rho &=&\sqrt{x^{2}+y^{2}}=\sqrt{1^{2}+3^{2}}=\sqrt{10}=3.\,\allowbreak
+162\,3 \\
+\phi &=&\arctan \left( \dfrac{y}{x}\right) =\arctan \left( \dfrac{3}{1}%
+\right) =71.\,\allowbreak 562\unit{%
+%TCIMACRO{\U{b0}}%
+%BeginExpansion
+{{}^\circ}%
+%EndExpansion
+} \\
+z &=&5
+\end{eqnarray*}
+
+\begin{eqnarray*}
+r &=&\sqrt{x^{2}+y^{2}+z^{2}}=\sqrt{1^{2}+3^{2}+5^{2}}=\sqrt{35}=\allowbreak
+5.\,\allowbreak 916\,1 \\
+\theta &=&\arctan \left( \dfrac{\sqrt{x^{2}+y^{2}}}{z}\right) =\arctan
+\left( \dfrac{\sqrt{1^{2}+3^{2}}}{5}\right) =32.\,\allowbreak 311\unit{%
+%TCIMACRO{\U{b0}}%
+%BeginExpansion
+{{}^\circ}%
+%EndExpansion
+} \\
+\phi &=&\arctan \left( \dfrac{y}{x}\right) =\arctan \left( \dfrac{3}{1}%
+\right) =71.\,\allowbreak 562\unit{%
+%TCIMACRO{\U{b0}}%
+%BeginExpansion
+{{}^\circ}%
+%EndExpansion
+}
+\end{eqnarray*}
+
+$\therefore $ $P\left( 1,3,5\right) \longrightarrow P\left( 3.\,\allowbreak
+162\,3,71.\,\allowbreak 562\unit{%
+%TCIMACRO{\U{b0}}%
+%BeginExpansion
+{{}^\circ}%
+%EndExpansion
+},5\right) \longrightarrow P\left( 5.\,\allowbreak 916\,1,32.\,\allowbreak
+311\unit{%
+%TCIMACRO{\U{b0}}%
+%BeginExpansion
+{{}^\circ}%
+%EndExpansion
+},71.\,\allowbreak 562\unit{%
+%TCIMACRO{\U{b0}}%
+%BeginExpansion
+{{}^\circ}%
+%EndExpansion
+}\right) $
+
+$T\left( 0,-4,3\right) \longrightarrow T\left( \rho ,\phi ,z\right)
+\longrightarrow T\left( r,\theta ,\phi \right) $ 
+\begin{eqnarray*}
+\rho &=&\sqrt{x^{2}+y^{2}}=\sqrt{0^{2}+\left( -4\right) ^{2}}=4 \\
+\phi &=&\arctan \left( \dfrac{y}{x}\right) =\arctan \left( \dfrac{-4}{0}%
+\right) =270\unit{%
+%TCIMACRO{\U{b0}}%
+%BeginExpansion
+{{}^\circ}%
+%EndExpansion
+} \\
+z &=&3
+\end{eqnarray*}
+\begin{eqnarray*}
+r &=&\sqrt{x^{2}+y^{2}+z^{2}}=\sqrt{0^{2}+\left( -4\right) ^{2}+3^{2}}=5 \\
+\theta &=&\arctan \left( \dfrac{\sqrt{x^{2}+y^{2}}}{z}\right) =\arctan
+\left( \dfrac{\sqrt{0^{2}+\left( -4\right) ^{2}}}{3}\right)
+=53.\,\allowbreak 13\unit{%
+%TCIMACRO{\U{b0}}%
+%BeginExpansion
+{{}^\circ}%
+%EndExpansion
+} \\
+\phi &=&\arctan \left( \dfrac{y}{x}\right) =\arctan \left( \dfrac{-4}{0}%
+\right) =270\unit{%
+%TCIMACRO{\U{b0}}%
+%BeginExpansion
+{{}^\circ}%
+%EndExpansion
+}
+\end{eqnarray*}
+
+$\therefore T\left( 0,-4,3\right) \longrightarrow T\left( 4,270\unit{%
+%TCIMACRO{\U{b0}}%
+%BeginExpansion
+{{}^\circ}%
+%EndExpansion
+},3\right) \longrightarrow T\left( 5,53.\,\allowbreak 13\unit{%
+%TCIMACRO{\U{b0}}%
+%BeginExpansion
+{{}^\circ}%
+%EndExpansion
+},270\unit{%
+%TCIMACRO{\U{b0}}%
+%BeginExpansion
+{{}^\circ}%
+%EndExpansion
+}\right) $
+
+$S\left( -3,-4,-10\right) \longrightarrow S\left( \rho ,\phi ,z\right)
+\longrightarrow S\left( r,\theta ,\phi \right) $ 
+\begin{eqnarray*}
+\rho &=&\sqrt{x^{2}+y^{2}}=\sqrt{\left( -3\right) ^{2}+\left( -4\right) ^{2}}%
+=5 \\
+\phi &=&\arctan \left( \dfrac{y}{x}\right) =\arctan \left( \dfrac{-4}{-3}%
+\right) =\left( 180\unit{%
+%TCIMACRO{\U{b0}}%
+%BeginExpansion
+{{}^\circ}%
+%EndExpansion
+}+53.\,\allowbreak 13\unit{%
+%TCIMACRO{\U{b0}}%
+%BeginExpansion
+{{}^\circ}%
+%EndExpansion
+}\right) =233.\,\allowbreak 13\unit{%
+%TCIMACRO{\U{b0}}%
+%BeginExpansion
+{{}^\circ}%
+%EndExpansion
+} \\
+z &=&-10
+\end{eqnarray*}
+\begin{eqnarray*}
+r &=&\sqrt{x^{2}+y^{2}+z^{2}}=\sqrt{\left( -3\right) ^{2}+\left( -4\right)
+^{2}+\left( -10\right) ^{2}}=5\sqrt{5}=\allowbreak 11.\,\allowbreak 18 \\
+\theta &=&\arctan \left( \dfrac{\sqrt{x^{2}+y^{2}}}{z}\right) =\arctan
+\left( \dfrac{\sqrt{\left( -3\right) ^{2}+\left( -4\right) ^{2}}}{-10}%
+\right) =180\unit{%
+%TCIMACRO{\U{b0}}%
+%BeginExpansion
+{{}^\circ}%
+%EndExpansion
+}-26.\,\allowbreak 565\unit{%
+%TCIMACRO{\U{b0}}%
+%BeginExpansion
+{{}^\circ}%
+%EndExpansion
+}=153.\,\allowbreak 44\unit{%
+%TCIMACRO{\U{b0}}%
+%BeginExpansion
+{{}^\circ}%
+%EndExpansion
+} \\
+\phi &=&\arctan \left( \dfrac{y}{x}\right) =\arctan \left( \dfrac{-4}{-3}%
+\right) =\left( 180\unit{%
+%TCIMACRO{\U{b0}}%
+%BeginExpansion
+{{}^\circ}%
+%EndExpansion
+}+53.\,\allowbreak 13\unit{%
+%TCIMACRO{\U{b0}}%
+%BeginExpansion
+{{}^\circ}%
+%EndExpansion
+}\right) =233.\,\allowbreak 13\unit{%
+%TCIMACRO{\U{b0}}%
+%BeginExpansion
+{{}^\circ}%
+%EndExpansion
+}
+\end{eqnarray*}
+
+$\therefore S\left( -3,-4,-10\right) \longrightarrow S\left(
+5,233.\,\allowbreak 13\unit{%
+%TCIMACRO{\U{b0}}%
+%BeginExpansion
+{{}^\circ}%
+%EndExpansion
+},-10\right) \longrightarrow S\left( 11.\,\allowbreak 18,153.\,\allowbreak 44%
+\unit{%
+%TCIMACRO{\U{b0}}%
+%BeginExpansion
+{{}^\circ}%
+%EndExpansion
+},233.\,\allowbreak 13\unit{%
+%TCIMACRO{\U{b0}}%
+%BeginExpansion
+{{}^\circ}%
+%EndExpansion
+}\right) $
+
+(b) 
+\[
+\mathbf{Q=}\dfrac{\sqrt{x^{2}+y^{2}}\mathbf{a}_{x}}{\sqrt{x^{2}+y^{2}+z^{2}}}%
+-\dfrac{yz\mathbf{a}_{z}}{\sqrt{x^{2}+y^{2}+z^{2}}} 
+\]
+
+let%
+\begin{eqnarray*}
+\rho &=&\sqrt{x^{2}+y^{2}} \\
+y &=&\rho \sin \left( \phi \right)
+\end{eqnarray*}
+
+$\therefore $%
+\[
+\mathbf{Q=\dfrac{\sqrt{x^{2}+y^{2}}\mathbf{a}_{x}}{\sqrt{x^{2}+y^{2}+z^{2}}}-%
+\dfrac{yz\mathbf{a}_{z}}{\sqrt{x^{2}+y^{2}+z^{2}}}=}\dfrac{\rho \mathbf{a}%
+_{x}}{\sqrt{\rho ^{2}+z^{2}}}-\dfrac{\rho z\sin \left( \phi \right) \mathbf{a%
+}_{z}}{\sqrt{\rho ^{2}+z^{2}}} 
+\]
+
+$\because \left( A_{x},A_{y},A_{z}\right) \longrightarrow \left( A_{\rho
+},A_{\phi },A_{z}\right) $ 
+\begin{eqnarray*}
+\left[ 
+\begin{array}{c}
+A_{p} \\ 
+A_{\phi } \\ 
+A_{z}%
+\end{array}%
+\right] &=&\left[ 
+\begin{array}{ccc}
+\cos \left( \phi \right) & \sin \left( \phi \right) & 0 \\ 
+-\sin \left( \phi \right) & \cos \left( \phi \right) & 0 \\ 
+0 & 0 & 1%
+\end{array}%
+\right] \left[ 
+\begin{array}{c}
+A_{x} \\ 
+A_{y} \\ 
+A_{z}%
+\end{array}%
+\right] \\
+&=&\left[ 
+\begin{array}{ccc}
+\cos \left( \phi \right) & \sin \left( \phi \right) & 0 \\ 
+-\sin \left( \phi \right) & \cos \left( \phi \right) & 0 \\ 
+0 & 0 & 1%
+\end{array}%
+\right] \left[ 
+\begin{array}{c}
+\dfrac{\rho }{\sqrt{\rho ^{2}+z^{2}}} \\ 
+0 \\ 
+-\dfrac{\rho z\sin \left( \phi \right) }{\sqrt{\rho ^{2}+z^{2}}}%
+\end{array}%
+\right] \\
+&=&\left[ 
+\begin{array}{c}
+\rho \dfrac{\cos \phi }{\sqrt{\rho ^{2}+z^{2}}} \\ 
+-\rho \dfrac{\sin \phi }{\sqrt{\rho ^{2}+z^{2}}} \\ 
+-z\rho \dfrac{\sin \phi }{\sqrt{\rho ^{2}+z^{2}}}%
+\end{array}%
+\right] \allowbreak \\
+\left[ 
+\begin{array}{c}
+A_{p} \\ 
+A_{\phi } \\ 
+A_{z}%
+\end{array}%
+\right] &=&\left( \dfrac{\rho }{\sqrt{\rho ^{2}+z^{2}}}\right) \left[ 
+\begin{array}{c}
+\cos \phi \\ 
+-\sin \phi \\ 
+-z\sin \phi%
+\end{array}%
+\right] \allowbreak
+\end{eqnarray*}
+
+$\therefore \mathbf{Q=}\dfrac{\sqrt{x^{2}+y^{2}}\mathbf{a}_{x}}{\sqrt{%
+x^{2}+y^{2}+z^{2}}}-\dfrac{yz\mathbf{a}_{z}}{\sqrt{x^{2}+y^{2}+z^{2}}}%
+=\left( \dfrac{\rho }{\sqrt{\rho ^{2}+z^{2}}}\right) \left[ \cos \left( \phi
+\right) \mathbf{a}_{\rho }-\sin \left( \phi \right) \mathbf{a}_{\phi }-z\sin
+\left( \phi \right) \mathbf{a}_{z}\right] $
+
+\begin{eqnarray*}
+y &=&r\sin \left( \theta \right) \sin \left( \phi \right) \\
+z &=&r\cos \left( \theta \right) \\
+r &=&\sqrt{x^{2}+y^{2}+z^{2}} \\
+\sqrt{x^{2}+y^{2}} &=&\sqrt{\left( r\sin \left( \theta \right) \cos \left(
+\phi \right) \right) ^{2}+\left( r\sin \left( \theta \right) \sin \left(
+\phi \right) \right) ^{2}} \\
+&=&r\sin \left( \theta \right) \sqrt{\cos ^{2}\left( \phi \right) +\sin
+^{2}\left( \phi \right) } \\
+\sqrt{x^{2}+y^{2}} &=&r\sin \left( \theta \right)
+\end{eqnarray*}
+
+$\therefore $
+
+\begin{eqnarray*}
+\mathbf{Q} &\mathbf{=}&\dfrac{\sqrt{x^{2}+y^{2}}\mathbf{a}_{x}}{\sqrt{%
+x^{2}+y^{2}+z^{2}}}-\mathbf{\dfrac{yz\mathbf{a}_{z}}{\sqrt{x^{2}+y^{2}+z^{2}}%
+}} \\
+&=&\dfrac{r\sin \left( \theta \right) \mathbf{a}_{x}}{r}-\dfrac{\left[ r\sin
+\left( \theta \right) \sin \left( \phi \right) \right] \left[ r\cos \left(
+\theta \right) \right] \mathbf{a}_{z}}{r} \\
+\mathbf{Q} &=&\sin \left( \theta \right) \mathbf{a}_{x}-r\sin \left( \theta
+\right) \cos \left( \theta \right) \sin \left( \phi \right) \mathbf{a}_{z}
+\end{eqnarray*}
+
+$\left( A_{x},A_{y},A_{z}\right) \longrightarrow \left( A_{r},A_{\theta
+},A_{\phi }\right) $ 
+\begin{eqnarray*}
+\left[ 
+\begin{array}{c}
+A_{r} \\ 
+A_{\theta } \\ 
+A_{\phi }%
+\end{array}%
+\right] &=&\left[ 
+\begin{array}{ccc}
+\cos \left( \phi \right) & \sin \left( \phi \right) & 0 \\ 
+-\sin \left( \phi \right) & \cos \left( \phi \right) & 0 \\ 
+0 & 0 & 1%
+\end{array}%
+\right] \left[ 
+\begin{array}{c}
+A_{x} \\ 
+A_{y} \\ 
+A_{z}%
+\end{array}%
+\right] \\
+&=&\left[ 
+\begin{array}{ccc}
+\sin \left( \theta \right) \cos \left( \phi \right) & \sin \left( \theta
+\right) \sin \left( \phi \right) & \cos \left( \theta \right) \\ 
+\cos \left( \theta \right) \cos \left( \phi \right) & \cos \left( \theta
+\right) \sin \left( \phi \right) & -\sin \left( \theta \right) \\ 
+-\sin \left( \phi \right) & \cos \left( \phi \right) & 0%
+\end{array}%
+\right] \left[ 
+\begin{array}{c}
+\sin \left( \theta \right) \\ 
+0 \\ 
+-r\sin \left( \theta \right) \cos \left( \theta \right) \sin \left( \phi
+\right)%
+\end{array}%
+\right] \\
+&=&\left[ 
+\begin{array}{c}
+\sin ^{2}\theta \cos \phi -r\sin \theta \cos ^{2}\theta \sin \phi \\ 
+\sin \theta \cos \theta \cos \phi +r\sin ^{2}\theta \cos \theta \sin \phi \\ 
+-\sin \theta \sin \phi%
+\end{array}%
+\right] \allowbreak \\
+\left[ 
+\begin{array}{c}
+A_{r} \\ 
+A_{\theta } \\ 
+A_{\phi }%
+\end{array}%
+\right] &=&\left[ 
+\begin{array}{c}
+\left( \sin \theta \right) \left( \sin \theta \cos \phi -r\cos ^{2}\theta
+\sin \phi \right) \\ 
+\left( \sin \theta \cos \theta \right) \left( \cos \phi +r\sin \theta \sin
+\phi \right) \\ 
+-\sin \theta \sin \phi%
+\end{array}%
+\right] \allowbreak
+\end{eqnarray*}
+
+$\therefore $ $\mathbf{Q=\dfrac{\sqrt{x^{2}+y^{2}}\mathbf{a}_{x}}{\sqrt{%
+x^{2}+y^{2}+z^{2}}}-\dfrac{yz\mathbf{a}_{z}}{\sqrt{x^{2}+y^{2}+z^{2}}}=}%
+\left( \sin \theta \right) \left( \sin \theta \cos \phi -r\cos ^{2}\theta
+\sin \phi \right) \mathbf{a}_{r}+\left( \sin \theta \cos \theta \right)
+\left( \cos \phi +r\sin \theta \sin \phi \right) \mathbf{a}_{\theta }-\sin
+\theta \sin \phi \mathbf{a}_{\phi }$
+
+(c) $\because T\left( 0,-4,3\right) \longrightarrow T\left( 4,270\unit{%
+%TCIMACRO{\U{b0}}%
+%BeginExpansion
+{{}^\circ}%
+%EndExpansion
+},3\right) \longrightarrow T\left( 5,53.\,\allowbreak 13\unit{%
+%TCIMACRO{\U{b0}}%
+%BeginExpansion
+{{}^\circ}%
+%EndExpansion
+},270\unit{%
+%TCIMACRO{\U{b0}}%
+%BeginExpansion
+{{}^\circ}%
+%EndExpansion
+}\right) $%
+\begin{eqnarray*}
+\mathbf{Q} &\mathbf{=}&\dfrac{\sqrt{0^{2}+\left( -4\right) ^{2}}\mathbf{a}%
+_{x}}{\sqrt{0^{2}+\left( -4\right) ^{2}+3^{2}}}-\dfrac{\left( -4\right)
+\left( 3\right) \mathbf{a}_{z}}{\sqrt{0^{2}+\left( -4\right) ^{2}+3^{2}}} \\
+\mathbf{Q} &=&0.8\mathbf{a}_{x}+2.\,\allowbreak 4\mathbf{a}_{z}
+\end{eqnarray*}
+\begin{eqnarray*}
+\mathbf{Q} &\mathbf{=}&\left( \dfrac{4}{\sqrt{4^{2}+3^{2}}}\right) \left[
+\cos \left( 270\unit{%
+%TCIMACRO{\U{b0}}%
+%BeginExpansion
+{{}^\circ}%
+%EndExpansion
+}\right) \mathbf{a}_{\rho }-\sin \left( 270\unit{%
+%TCIMACRO{\U{b0}}%
+%BeginExpansion
+{{}^\circ}%
+%EndExpansion
+}\right) \mathbf{a}_{\phi }-z\sin \left( 270\unit{%
+%TCIMACRO{\U{b0}}%
+%BeginExpansion
+{{}^\circ}%
+%EndExpansion
+}\right) \mathbf{a}_{z}\right] \\
+&=&\left( \dfrac{4}{5}\right) \left( \left( 0\right) \mathbf{a}_{\rho
+}-\left( -1\right) \mathbf{a}_{\phi }-\left( 3\right) \left( -1\right) 
+\mathbf{a}_{z}\right) \\
+\mathbf{Q} &=&0.8\mathbf{a}_{\phi }+2.\,\allowbreak 4\mathbf{a}_{z}
+\end{eqnarray*}%
+\begin{eqnarray*}
+\mathbf{Q} &\mathbf{=}&\left( \sin \left( 53.\,\allowbreak 13\unit{%
+%TCIMACRO{\U{b0}}%
+%BeginExpansion
+{{}^\circ}%
+%EndExpansion
+}\right) \right) \left( \sin \left( 53.\,\allowbreak 13\unit{%
+%TCIMACRO{\U{b0}}%
+%BeginExpansion
+{{}^\circ}%
+%EndExpansion
+}\right) \cos \left( 270\unit{%
+%TCIMACRO{\U{b0}}%
+%BeginExpansion
+{{}^\circ}%
+%EndExpansion
+}\right) -\left( 5\right) \left( \cos \left( 53.\,\allowbreak 13\unit{%
+%TCIMACRO{\U{b0}}%
+%BeginExpansion
+{{}^\circ}%
+%EndExpansion
+}\right) ^{2}\right) \sin \left( 270\unit{%
+%TCIMACRO{\U{b0}}%
+%BeginExpansion
+{{}^\circ}%
+%EndExpansion
+}\right) \right) \mathbf{a}_{r} \\
+&&+\left( \sin \left( 53.\,\allowbreak 13\unit{%
+%TCIMACRO{\U{b0}}%
+%BeginExpansion
+{{}^\circ}%
+%EndExpansion
+}\right) \cos \left( 53.\,\allowbreak 13\unit{%
+%TCIMACRO{\U{b0}}%
+%BeginExpansion
+{{}^\circ}%
+%EndExpansion
+}\right) \right) \left( \cos \left( 270\unit{%
+%TCIMACRO{\U{b0}}%
+%BeginExpansion
+{{}^\circ}%
+%EndExpansion
+}\right) +\left( 5\right) \sin \left( 53.\,\allowbreak 13\unit{%
+%TCIMACRO{\U{b0}}%
+%BeginExpansion
+{{}^\circ}%
+%EndExpansion
+}\right) \sin \left( 270\unit{%
+%TCIMACRO{\U{b0}}%
+%BeginExpansion
+{{}^\circ}%
+%EndExpansion
+}\right) \right) \mathbf{a}_{\theta } \\
+&&-\sin \left( 53.\,\allowbreak 13\unit{%
+%TCIMACRO{\U{b0}}%
+%BeginExpansion
+{{}^\circ}%
+%EndExpansion
+}\right) \sin \left( 270\unit{%
+%TCIMACRO{\U{b0}}%
+%BeginExpansion
+{{}^\circ}%
+%EndExpansion
+}\right) \mathbf{a}_{\phi } \\
+&=&\left( 0.8\right) \left( 0.8\left( 0\right) -\left( 5\right) \left(
+0.6\right) ^{2}\left( -1\right) \right) \mathbf{a}_{r}+\left( 0.8\left(
+0.6\right) \right) \left( 0+\left( 5\right) \left( 0.8\right) \left(
+-1\right) \right) \mathbf{a}_{\theta }-\left( 0.8\right) \left( -1\right) 
+\mathbf{a}_{\phi } \\
+\mathbf{Q} &=&1.\,\allowbreak 44\mathbf{a}_{r}-1.\,\allowbreak 92\mathbf{a}%
+_{\theta }+0.8\mathbf{a}_{\phi }
+\end{eqnarray*}
+
+$\therefore $ $\mathbf{Q=}0.8\mathbf{a}_{x}+2.\,\allowbreak 4\mathbf{a}%
+_{z}=0.8\mathbf{a}_{\phi }+2.\,\allowbreak 4\mathbf{a}_{z}=0.8\mathbf{a}%
+_{\phi }+2.\,\allowbreak 4\mathbf{a}_{z}$
+
+\bigskip
+
+\subsubsection{Example 2.2.}
+
+Express vector 
+\[
+\mathbf{B=}\dfrac{10}{r}\mathbf{a}_{r}+r\cos \left( \theta \right) \mathbf{a}%
+_{\theta }+\mathbf{a}_{\phi }
+\]%
+in Cartesian and cylindrical coordinates. Find $\mathbf{B}\left(
+-3,4,0\right) $ and $\mathbf{B}\left( 5,\dfrac{\pi }{2},-2\right) $.
+
+Solution:
+
+Using $\left( B_{r},B_{\theta },B_{\phi }\right) $ $\longrightarrow \left(
+B_{x},B_{y},B_{z}\right) $ 
+\begin{eqnarray*}
+\left[ 
+\begin{array}{c}
+B_{x} \\ 
+B_{y} \\ 
+B_{z}%
+\end{array}%
+\right]  &=&\left[ 
+\begin{array}{ccc}
+\sin \left( \theta \right) \cos \left( \phi \right)  & \cos \left( \theta
+\right) \cos \left( \phi \right)  & -\sin \left( \phi \right)  \\ 
+\sin \left( \theta \right) \sin \left( \phi \right)  & \cos \left( \theta
+\right) \sin \left( \phi \right)  & \cos \left( \phi \right)  \\ 
+\cos \left( \theta \right)  & -\sin \left( \theta \right)  & 0%
+\end{array}%
+\right] \left[ 
+\begin{array}{c}
+B_{r} \\ 
+B_{\theta } \\ 
+B_{\phi }%
+\end{array}%
+\right]  \\
+&=&\left[ 
+\begin{array}{ccc}
+\sin \left( \theta \right) \cos \left( \phi \right)  & \cos \left( \theta
+\right) \cos \left( \phi \right)  & -\sin \left( \phi \right)  \\ 
+\sin \left( \theta \right) \sin \left( \phi \right)  & \cos \left( \theta
+\right) \sin \left( \phi \right)  & \cos \left( \phi \right)  \\ 
+\cos \left( \theta \right)  & -\sin \left( \theta \right)  & 0%
+\end{array}%
+\right] \left[ 
+\begin{array}{c}
+\dfrac{10}{r} \\ 
+r\cos \left( \theta \right)  \\ 
+1%
+\end{array}%
+\right]  \\
+\left[ 
+\begin{array}{c}
+B_{x} \\ 
+B_{y} \\ 
+B_{z}%
+\end{array}%
+\right]  &=&\left[ 
+\begin{array}{c}
+\dfrac{10}{r}\cos \phi \sin \theta +r\cos ^{2}\theta \cos \phi -\sin \phi 
+\\ 
+\dfrac{10}{r}\sin \theta \sin \phi +r\cos ^{2}\theta \sin \phi +\cos \phi 
+\\ 
+\dfrac{10}{r}\cos \theta 
+\end{array}%
+\right] 
+\end{eqnarray*}
+
+$\therefore $%
+\begin{eqnarray*}
+B_{x} &=&\dfrac{10}{r}\cos \phi \sin \theta +r\cos ^{2}\theta \cos \phi
+-\sin \phi  \\
+B_{y} &=&\dfrac{10}{r}\sin \theta \sin \phi +r\cos ^{2}\theta \sin \phi
++\cos \phi  \\
+B_{z} &=&\dfrac{10}{r}\cos \theta -r\cos \theta \sin \theta 
+\end{eqnarray*}
+
+
+\end{document}
