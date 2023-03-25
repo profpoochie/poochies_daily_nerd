@@ -8,7 +8,7 @@
 %TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
 %TCIDATA{BibliographyScheme=Manual}
 %TCIDATA{Created=Saturday, March 25, 2023 22:57:12}
-%TCIDATA{LastRevised=Sunday, March 26, 2023 01:31:58}
+%TCIDATA{LastRevised=Sunday, March 26, 2023 01:47:11}
 %TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
 %TCIDATA{<META NAME="DocumentShell" CONTENT="Standard LaTeX\Blank - Standard LaTeX Article">}
 %TCIDATA{CSTFile=40 LaTeX article.cst}
@@ -109,6 +109,21 @@ In[]:= Simplify[(a^3 b^2 c^4)/(a b c^-2)]
 Out[]= a^2 b c^6
 In[]:= % /. {a -> 3, b -> 1/8, c -> 2}
 Out[]= 72
+ 
+\end{verbatim}
+
+Problem 4. Simplify $\dfrac{x^{2}y^{3}+xy^{2}}{xy}$.
+
+Solution:
+
+Mathematica code:
+\begin{verbatim}
+In[]:= Simplify[(x^2 y^3 + x y^2)/(x y)]
+Out[]= y (1 + x y)
+\end{verbatim}
+
+The answer is $y\left( xy+1\right) $
+\begin{verbatim}
  
  
 In[]:= 
