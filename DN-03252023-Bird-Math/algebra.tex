@@ -1,12 +1,14 @@
 
 \documentclass{article}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{verbatim}
+
 %TCIDATA{OutputFilter=LATEX.DLL}
 %TCIDATA{Version=5.50.0.2953}
 %TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
 %TCIDATA{BibliographyScheme=Manual}
 %TCIDATA{Created=Saturday, March 25, 2023 22:57:12}
-%TCIDATA{LastRevised=Saturday, March 25, 2023 23:23:13}
+%TCIDATA{LastRevised=Sunday, March 26, 2023 01:31:58}
 %TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
 %TCIDATA{<META NAME="DocumentShell" CONTENT="Standard LaTeX\Blank - Standard LaTeX Article">}
 %TCIDATA{CSTFile=40 LaTeX article.cst}
@@ -34,7 +36,6 @@
 \newtheorem{summary}[theorem]{Summary}
 \newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
 \input{tcilatex}
-
 \begin{document}
 
 
@@ -66,9 +67,52 @@ The law of indices are:
 \item $a^{0}=1$
 \end{enumerate}
 
-\begin{description}
-\item 
-\end{description}
+\begin{problem}
+1. Evaluate $4a^{2}bc^{3}-2ac$ when $a=2$, $b=\dfrac{1}{2}$ , $c=1\dfrac{1}{2%
+}$
 
+\begin{solution}
+Mathematica code:
+\end{solution}
+\end{problem}
+
+\begin{verbatim}
+In[]:= 4 a^2 b c^3 - 2 a c /. {a -> 2, b -> 1/2, c -> 1.5}
+Out[]= 21.
+ 
+\end{verbatim}
+
+Problem 2. Multiply $3x+2y$ by $x-y$
+
+Solution:
+
+Mathematica code:
+\begin{verbatim}
+In[]:= Expand[(3 x + 2 y) (x - y)] // TraditionalForm
+Out[]= 3 x^2 - x y - 2 y^2
+\end{verbatim}
+
+Answer is $3x^{2}-xy-2y^{2}$
+
+\bigskip 
+
+Problem 3. Simplify $\dfrac{a^{3}b^{2}c^{4}}{abc^{-2}}$ and evaluate when $%
+a=3$, $b=\dfrac{1}{8}$ and $c=2$.
+
+Solution:
+
+Mathematica code:
+\begin{verbatim}
+In[]:= Expand[(3 x + 2 y) (x - y)] // TraditionalForm
+Out[]= 3 x^2 - x y - 2 y^2
+In[]:= Simplify[(a^3 b^2 c^4)/(a b c^-2)]
+Out[]= a^2 b c^6
+In[]:= % /. {a -> 3, b -> 1/8, c -> 2}
+Out[]= 72
+ 
+ 
+In[]:= 
+Out[]= 
+\end{verbatim}
 
 \end{document}
